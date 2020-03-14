@@ -91,7 +91,7 @@ end
 => [{:name=>"Byron Poodle",
   :movies=>[{:title=>"At the park"}, {:title=>"On the couch"}]},
  {:name=>"Nancy Drew", :movies=>[{:title=>"Biting"}]}]
- 
+
 def movies_with_directors_set(source)
   # GOAL: For each director, find their :movies Array and stick it in a new Array
   #
