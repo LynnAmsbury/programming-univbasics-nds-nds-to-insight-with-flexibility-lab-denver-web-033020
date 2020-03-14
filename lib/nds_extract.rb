@@ -54,7 +54,6 @@ def movies_with_director_key(name, movies_collection)
     index += 1 # Increment the movie index counter
   end
   movies_collection # Return movies collection array
-  binding.pry
 end
 
 collection = [{:title=>"Movie A", :studio=>"Alpha Films", :worldwide_gross=>10},
