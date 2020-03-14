@@ -78,7 +78,10 @@ def gross_per_studio(collection)
   while index < collection.length do # While the index is less than the length of the collection
       movie_hash = collection[index] # Hash of the movies = index of the current movie from the collection
       # movie_hash = {:title=>"Movie A", :studio=>"Alpha Films", :worldwide_gross=>10}
-      studio_gross_total[movie_hash[:studio]] += studio_gross_total[movie_hash[:worldwide_gross]]
+      if studio_gross_total[movie_hash[:studio]]
+      studio_gross_total[movie_hash[:studio]] += movie_hash[:worldwide_gross]
+    else
+      studio_gross_total[movie_hash[:studio]] = movie_hash[:worldwide_gross]
       # Adds/increments studio key to studio_gross_total hash += adds/increments gross value to studio_gross_total hash
       index += 1 # Increment the current movie counter
   end
