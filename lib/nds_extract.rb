@@ -53,7 +53,7 @@ def movies_with_director_key(name, movies_collection)
                                                     # for the current movie (the index)
     index += 1 # Increment the movie index counter
   end
-  movies_collection # Return movies collection array
+  movies_collection # Return movies collection array (of hashes of movies that have a :director_name key)
 end
 
 # collection = [{:title=>"Movie A", :studio=>"Alpha Films", :worldwide_gross=>10},
