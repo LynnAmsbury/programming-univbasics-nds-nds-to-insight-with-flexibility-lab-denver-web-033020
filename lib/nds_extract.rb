@@ -104,15 +104,7 @@ def movies_with_directors_set(source)
   # pp source
   movies = []
   dir_hash = {}
-  index = 0
-  while index < source.length do
-    dir_hash = source[index]
-    dir_name = dir_hash[:name]
-    dir_movies = dir_hash[:movies]
-    movies << movies_with_director_key(dir_name, dir_movies)
-    index += 1
-  end
-  movies
+  
 end
 
 # ----------------    End of Your Code Region --------------------
