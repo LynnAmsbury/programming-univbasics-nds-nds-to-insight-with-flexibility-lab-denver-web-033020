@@ -56,9 +56,9 @@ def movies_with_director_key(name, movies_collection)
   movies_collection # Return movies collection array
 end
 
-collection = [{:title=>"Movie A", :studio=>"Alpha Films", :worldwide_gross=>10},
- {:title=>"Movie B", :studio=>"Alpha Films", :worldwide_gross=>30},
- {:title=>"Movie C", :studio=>"Omega Films", :worldwide_gross=>30}]
+# collection = [{:title=>"Movie A", :studio=>"Alpha Films", :worldwide_gross=>10},
+#  {:title=>"Movie B", :studio=>"Alpha Films", :worldwide_gross=>30},
+#  {:title=>"Movie C", :studio=>"Omega Films", :worldwide_gross=>30}]
 
 def gross_per_studio(collection)
   # GOAL: Given an Array of Hashes where each Hash represents a movie,
@@ -84,13 +84,9 @@ def gross_per_studio(collection)
   studio_gross_total # Returns studio_gross_total
 end
 
-# [[5] pry(#<RSpec::ExampleGroups::MoviesWithDirectorsSet::WhenGivenAHashWithKeysNameAndMovies::ReturnsAnArrayOfHashesThatRepresentMovies::AndEachHashHasADirectorNameKeySe
-# [{:name=>"Byron Poodle",me>)> pp source
-#   :movies=>[{:title=>"At the park"}, {:title=>"On the couch"}]},
-#  {:name=>"Nancy Drew", :movies=>[{:title=>"Biting"}]}]
-# => [{:name=>"Byron Poodle",
-#   :movies=>[{:title=>"At the park"}, {:title=>"On the couch"}]},
-#  {:name=>"Nancy Drew", :movies=>[{:title=>"Biting"}]}]
+=> [{:name=>"Byron Poodle",thTheValueThatWasInName>)> source
+  :movies=>[{:title=>"At the park"}, {:title=>"On the couch"}]},
+ {:name=>"Nancy Drew", :movies=>[{:title=>"Biting"}]}]
 
 def movies_with_directors_set(source)
   # GOAL: For each director, find their :movies Array and stick it in a new Array
@@ -106,6 +102,17 @@ def movies_with_directors_set(source)
   # Call movies_with_director_key for each director in the source array and return an array of those arrays
   binding.pry
   pp source
+  movies = []
+  dir_hash = {}
+  index = 0 
+  while index < source.length do 
+    dir_hash = source[index]
+    dir_name = dir_hash[:name]
+    dir_movies = dir_hash[:movies]
+    movies << movies_with_director_key(dir_name, dir_movies)
+    i += 1 
+  end 
+  movies
 end
 
 # ----------------    End of Your Code Region --------------------
