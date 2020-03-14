@@ -53,7 +53,7 @@ describe 'movies_with_directors_set' do
         }
 
         it 'correctly "distributes" Byron Poodle as :director_name of the first film' do
-          binding.pry
+          # binding.pry
           # { :name => "A", :movies => [{ :title => "Test" }] }
           # becomes... [[{:title => "Test", :director_name => "A"}], ...[], ... []]
           results = movies_with_directors_set(test_data)
