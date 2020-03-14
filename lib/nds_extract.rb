@@ -109,6 +109,7 @@ def movies_with_directors_set(source)
       movies_AoA << movies_with_director_key(director_hash[:name], director_hash[:movies])
     index += 1
     end
+    movies_AoA
 end
 
 
