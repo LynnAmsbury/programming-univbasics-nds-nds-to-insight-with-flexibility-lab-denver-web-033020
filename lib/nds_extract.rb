@@ -54,6 +54,7 @@ def movies_with_director_key(name, movies_collection)
     index += 1 # Increment the movie index counter
   end
   movies_collection # Return movies collection array
+  binding.pry
 end
 
 collection = [{:title=>"Movie A", :studio=>"Alpha Films", :worldwide_gross=>10},
@@ -102,6 +103,8 @@ def movies_with_directors_set(source)
   # RETURN:
   # Array of Arrays containing all of a director's movies. Each movie will need
   # to have a :director_name key added to it.
+  # 
+  # Call movies_with_director_key for each director in the source array and return an array of those arrays
   binding.pry
   pp source
 end
