@@ -105,6 +105,8 @@ def movies_with_directors_set(source)
     index = 0
     while index < source.length do
       binding.pry
+      director_hash = source[index]
+      movies_AoA << movies_with_director_key(director_hash[:name], director_hash[:movies])
     index += 1
     end
 end
