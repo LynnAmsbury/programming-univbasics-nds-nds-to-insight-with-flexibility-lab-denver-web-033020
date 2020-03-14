@@ -84,10 +84,14 @@ def gross_per_studio(collection)
   studio_gross_total # Returns studio_gross_total
 end
 
-# source
-#   :movies=>[{:title=>"At the park"}, {:title=>"On the couch"}]},
-#  {:name=>"Nancy Drew", :movies=>[{:title=>"Biting"}]}]
-
+[[5] pry(#<RSpec::ExampleGroups::MoviesWithDirectorsSet::WhenGivenAHashWithKeysNameAndMovies::ReturnsAnArrayOfHashesThatRepresentMovies::AndEachHashHasADirectorNameKeySe
+[{:name=>"Byron Poodle",me>)> pp source
+  :movies=>[{:title=>"At the park"}, {:title=>"On the couch"}]},
+ {:name=>"Nancy Drew", :movies=>[{:title=>"Biting"}]}]
+=> [{:name=>"Byron Poodle",
+  :movies=>[{:title=>"At the park"}, {:title=>"On the couch"}]},
+ {:name=>"Nancy Drew", :movies=>[{:title=>"Biting"}]}]
+ 
 def movies_with_directors_set(source)
   # GOAL: For each director, find their :movies Array and stick it in a new Array
   #
@@ -98,7 +102,7 @@ def movies_with_directors_set(source)
   # RETURN:
   # Array of Arrays containing all of a director's movies. Each movie will need
   # to have a :director_name key added to it.
-  binding.pry
+  pp source
 end
 
 # ----------------    End of Your Code Region --------------------
