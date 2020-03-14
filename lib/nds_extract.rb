@@ -101,7 +101,7 @@ def movies_with_directors_set(source)
   # to have a :director_name key added to it.
   #
   # Call movies_with_director_key for each director in the source array and return an array of those arrays
-  # binding.pry
+  binding.pry
   # pp source
   movies = []
   dir_hash = {}
